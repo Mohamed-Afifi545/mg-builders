@@ -145,44 +145,6 @@
   align-items: center;
 }
 
-.delivered-meals {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-  gap: 1.6rem;
-}
-
-.delivered-imgs {
-  display: flex;
-}
-
-.delivered-imgs img {
-  height: 4.8rem;
-  width: 4.8rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  margin-right: -1.6rem;
-  border: 3px solid var(--color-primary-tint);
-}
-
-.delivered-imgs img:last-child {
-  margin: 0;
-}
-
-.delivered-txt {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.delivered-txt span {
-  color: #faf17c;
-  font-weight: 700;
-}
-
 /* *********************************** */
 /* about us */
 
@@ -277,41 +239,13 @@
 }
 
 /* *************************** */
-/* featured in */
+/* services */
 
-.section-featured {
-  padding: 4.8rem 0 3.2rem 0;
-}
-
-.heading-featured {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 2.4rem;
-  color: #888;
-}
-
-.logos {
-  display: flex;
-  justify-content: space-around;
-}
-.logos img {
-  height: 3.2rem;
-  filter: brightness(0);
-  -webkit-filter: brightness(0);
-  opacity: 50%;
-}
-
-/* *************************** */
-/* how it work */
-
-.section-how {
+.section-services {
   padding: 9.6rem 0;
 }
 
-.section-how .grid {
+.section-services .grid {
   gap: 0 0;
 }
 
@@ -328,13 +262,13 @@
   display: block;
   border-radius: 50%;
   position: absolute;
-  /* top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%); */
+  -o-transform: translate(-50%, -50%);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -382,108 +316,6 @@
 .step-description {
   font-size: 1.8rem;
   line-height: 1.8;
-}
-
-/* *************************** */
-/* Meals */
-
-.section-meals {
-  padding: 9.6rem 0;
-}
-
-.meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  -webkit-border-radius: 11px;
-  -moz-border-radius: 11px;
-  -ms-border-radius: 11px;
-  -o-border-radius: 11px;
-  overflow: hidden;
-  transition: all 400ms;
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -ms-transition: all 400ms;
-  -o-transition: all 400ms;
-}
-
-.meal:hover {
-  transform: translateY(-1.2rem);
-  -webkit-transform: translateY(-1.2rem);
-  -moz-transform: translateY(-1.2rem);
-  -ms-transform: translateY(-1.2rem);
-  -o-transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
-}
-
-.meal-content {
-  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
-}
-
-.meal-tags {
-  margin-bottom: 12px;
-  display: flex;
-  gap: 4px;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #ffffff;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-}
-
-.tag--vegetarian {
-  background-color: #51cf86;
-}
-
-.tag--vegan {
-  background-color: #94d82d;
-}
-
-.tag--paleo {
-  background-color: #ffd43b;
-}
-
-.meal-title {
-  font-size: 2.4rem;
-  color: #ffffff;
-  font-weight: 600;
-  margin-bottom: 3.2rem;
-}
-
-.meal-attributes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.meal-attribute {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-.meal-icon {
-  height: 2.4rem;
-  width: 2.4rem;
-  color: #e67e22;
-}
-
-.meal-img {
-  width: 100%;
-}
-
-.all-recipes {
-  text-align: center;
-  font-size: 1.8rem;
 }
 
 /* *************************** */
@@ -557,126 +389,6 @@
 }
 
 /* *************************** */
-/* Pricing */
-
-.section-pricing {
-  padding: 9.6rem 0;
-}
-
-.pricing-plan--starter {
-  border: 2px solid var(--color-primary-tint);
-  padding: 4.6rem;
-}
-
-.pricing-plan--complete {
-  background-color: var(--color-primary-tint);
-  padding: 4.8rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing-plan--complete::after {
-  content: "Best Value";
-  position: absolute;
-  top: 5%;
-  right: -25%;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-  background-color: #ffd43b;
-  padding: 0.8rem 10rem;
-  color: #ffffff;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-}
-
-.pricing-plan {
-  border-radius: 11px;
-  -webkit-border-radius: 11px;
-  -moz-border-radius: 11px;
-  -ms-border-radius: 11px;
-  -o-border-radius: 11px;
-  width: 75%;
-}
-
-.pricing-plan--starter {
-  justify-self: end;
-}
-
-.plan-header {
-  text-align: center;
-  margin-bottom: 4.8rem;
-}
-
-.plan-name {
-  color: #c2ba50;
-  font-weight: 600;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.75;
-  margin-bottom: 3.2rem;
-}
-
-.plan-price {
-  font-size: 6.2rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1.6rem;
-}
-
-.plan-price span {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-right: 0.8rem;
-}
-
-.plan-txt {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  color: #6f6f6f;
-}
-
-.plan-sign-up {
-  text-align: center;
-  margin-top: 4.8rem;
-}
-
-.plan-details {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.feature-icon {
-  color: #e67e22;
-  height: 3.2rem;
-  width: 3.2rem;
-  margin-bottom: 3.2rem;
-  background-color: var(--color-primary-tint);
-  padding: 1.6rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.feature-title {
-  font-size: 2.4rem;
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 1.6rem;
-}
-
-.feature-txt {
-  font-size: 1.8rem;
-  line-height: 1.8;
-}
-
-/* *************************** */
 /* CTA */
 
 .section-cta {
@@ -724,6 +436,11 @@
   );
   background-size: cover;
   background-position: center;
+}
+
+.cta-img-box img {
+  width: 100%;
+  height: 100%;
 }
 
 .cta-form {
