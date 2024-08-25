@@ -7,9 +7,9 @@
 --line height: 1 , 1.6
 
 -colors
---primary color: #FAF17C
---tint:#fdf2e9 , #fae5d3
---shades:#45260a , #cf711f , #eb984e
+--primary color: #ffd700
+--tint:#ffeda6 , #ffe064
+--shades:#635200 , #9e8500 , #debb00
 --accents: 
 --greys: #555 , #333 , #6f6f6f
 
@@ -29,6 +29,17 @@
 /* *************************** */
 /* general */
 
+:root {
+  --color-primary: #ffd700;
+  --color-primary-tint: #fff3c1;
+  --color-primary-shade: #524500;
+  --color-accent-1: #9e8500;
+  --color-accent-2: #debb00;
+  --color-grey-1: #555;
+  --color-grey-2: #333;
+  --color-grey-3: #6f6f6f;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -41,7 +52,7 @@ html {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #faf17c;
+  color: var(--color-primary);
   overflow-x: hidden;
   background-color: black;
 }
@@ -61,7 +72,7 @@ main {
 .heading-secondary,
 .heading-primary {
   font-weight: 700;
-  color: #faf17c;
+  color: var(--color-primary);
   letter-spacing: -0.5px;
 }
 
@@ -87,7 +98,7 @@ main {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #cf711f;
+  color: var(--color-primary-shade);
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -117,33 +128,33 @@ main {
 }
 .btn--full:link,
 .btn--full:visited {
-  background-color: #c1b406;
+  background-color: var(--color-accent-2);
   color: #fff;
 }
 .btn--full:hover,
 .btn--full:active {
-  background-color: #766e0a;
+  background-color: var(--color-accent-1);
 }
 .btn--outline:link,
 .btn--outline:visited {
   background-color: #fff;
-  color: #555;
+  color: var(--color-grey-1);
 }
 .btn--outline:hover,
 .btn--outline:active {
-  background-color: #fdf2e9;
-  color: #555;
+  background-color: var(--color-primary-tint);
+  color: var(--color-grey-1);
   box-shadow: inset 0 0 0 3px #fff;
 }
 .btn--form {
-  background-color: #45260a;
+  background-color: var(--color-primary-shade);
   color: #fdf2e9;
   align-self: end;
   padding: 1.2rem;
 }
 .btn--form:hover {
   background-color: #fff;
-  color: #555;
+  color: var(--color-grey-1);
 }
 
 .link:link,
@@ -236,7 +247,7 @@ strong {
   line-height: 1.2;
 }
 
-*:focus {
+/* *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem #e67e22;
-}
+} */

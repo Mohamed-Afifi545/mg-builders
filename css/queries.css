@@ -62,8 +62,7 @@
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 0 8rem;
-    gap: 6.4rem;
+    padding: 26px 18rem;
   }
 
   .hero-image {
@@ -185,6 +184,16 @@
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-about {
+    flex-direction: column-reverse;
+    padding: 21.8rem 0 19.6rem 0;
+    height: 100vh;
+  }
+
+  .about-container {
+    width: 100%;
   }
 
   .logos img {
