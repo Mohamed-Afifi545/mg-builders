@@ -77,7 +77,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
@@ -133,3 +132,136 @@ checkFlexGap();
 //     margin-bottom: 4.8rem;
 //   }
 // }
+
+///////////////////////////////////////////////////
+
+// slider
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+const dotContainer = document.querySelector(".dots");
+
+let curSlide = 0;
+const maxSlide = slides.length;
+
+const createDots = function () {
+  slides.forEach((_, i) => {
+    dotContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+    <button class="dots__dot" data-slide="${i}"></button>
+    `
+    );
+  });
+};
+
+const activateDot = function (slide) {
+  document
+    .querySelectorAll(".dots__dot")
+    .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add("dots__dot--active");
+};
+
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${(i - slide) * 100}%)`)
+  );
+};
+
+//next slide
+const nextSlide = function () {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  goToSlide(curSlide);
+  activateDot(curSlide);
+};
+
+//previous slide
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+  goToSlide(curSlide);
+  activateDot(curSlide);
+};
+
+const init = function () {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+};
+
+init();
+
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") nextSlide();
+  if (e.key === "ArrowLeft") prevSlide();
+});
+
+dotContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots__dot")) {
+    const { slide } = e.target.dataset;
+    goToSlide(slide);
+    curSlide = parseInt(slide, 10);
+    activateDot(slide);
+  }
+});
+
+//go to top when refresh
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+////////////////////////
+
+// Variables to store the starting points
+let startX = 0;
+let startY = 0;
+
+// Function to get the touch start coordinates
+function handleTouchStart(event) {
+  const firstTouch = event.touches[0];
+  startX = firstTouch.clientX;
+  startY = firstTouch.clientY;
+}
+
+// Function to handle the end of the touch
+function handleTouchMove(event) {
+  if (!startX || !startY) {
+    return;
+  }
+
+  let endX = event.touches[0].clientX;
+  let endY = event.touches[0].clientY;
+
+  let diffX = startX - endX;
+  let diffY = startY - endY;
+
+  // Check if the swipe is more horizontal than vertical
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    if (diffX > 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  }
+
+  // Reset values
+  startX = 0;
+  startY = 0;
+}
+
+// Add event listeners to the desired element
+const slider = document.querySelector(".slider");
+slider.addEventListener("touchstart", handleTouchStart, false);
+slider.addEventListener("touchmove", handleTouchMove, false);
