@@ -244,7 +244,7 @@
 /* services */
 
 .section-services {
-  padding: 9.6rem 0 0 0;
+  padding: 10.6rem 0 0 0;
 }
 
 .section-services .grid {
@@ -325,7 +325,7 @@
 /* Testimonial SLIDER */
 .slider {
   max-width: 110rem;
-  height: 50rem;
+  height: 45rem;
   margin: 0 auto;
   position: relative;
 
@@ -337,7 +337,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
+  height: 45rem;
 
   display: flex;
   align-items: center;
@@ -360,9 +360,9 @@
   z-index: 10;
 
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-primary-tint);
   font-family: inherit;
-  color: #333;
+  color: black;
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
@@ -392,7 +392,7 @@
 
 .dots__dot {
   border: none;
-  background-color: #b9b9b9;
+  background-color: var(--color-primary-tint);
   opacity: 0.7;
   height: 1rem;
   width: 1rem;
@@ -418,8 +418,14 @@
 /* TESTIMONIALS */
 
 .section-testimonials {
-  padding: 9.6rem 0 0 0;
+  padding: 10.6rem 0 0 0;
 }
+
+.section-testimonials h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
 .testimonial {
   width: 65%;
   position: relative;
@@ -446,7 +452,7 @@
 .testimonial__text {
   font-size: 1.7rem;
   margin-bottom: 3.5rem;
-  color: #666;
+  color: var(--color-primary);
 }
 
 .testimonial__author {
@@ -525,7 +531,7 @@
 /* gallery */
 
 .section-gallery {
-  padding: 9.6rem 0 0 0;
+  padding: 10.6rem 0 0 0;
 }
 
 .gallery {
@@ -720,7 +726,7 @@
 .footer-link:visited {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--color-grey-3);
+  color: var(--white);
   transition: all 300ms;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
