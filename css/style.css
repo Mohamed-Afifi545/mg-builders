@@ -60,6 +60,11 @@
   background-color: var(--secondary-gold);
 }
 
+.nav-active {
+  color: var(--accent-bright-orange) !important;
+  font-size: 1.6rem !important;
+}
+
 .btn-mobile-nav {
   border: none;
   background: none;
@@ -673,6 +678,30 @@
   box-shadow: 0 0 0 0.3rem rgba(253, 242, 233, 0.5);
 }
 
+/* *************************** */
+/* Map */
+
+.section-map {
+  padding: 13.6rem 0 4rem 0;
+  height: 100vh;
+}
+.map-container {
+  font-size: 2rem;
+  padding: 5rem;
+  z-index: 2;
+}
+
+.map-container p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.map-wrapper {
+  max-width: 75%;
+  height: 45rem;
+  margin: 0 auto;
+}
 /* *************************** */
 /* Footer */
 

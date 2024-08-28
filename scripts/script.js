@@ -37,6 +37,8 @@ closeBut.addEventListener("click", function () {
 
 navLink.forEach((link) => {
   link.addEventListener("click", function () {
+    navLink.forEach((nav) => nav.classList.remove("nav-active"));
+    this.classList.add("nav-active");
     if (navMenu.classList.contains("nav-open")) {
       body.classList.remove("stop-scrolling");
       navMenu.classList.remove("nav-open");
@@ -326,3 +328,54 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
+
+// ((g) => {
+//   var h,
+//     a,
+//     k,
+//     p = "The Google Maps JavaScript API",
+//     c = "google",
+//     l = "importLibrary",
+//     q = "__ib__",
+//     el = document.querySelector(".map-wrapper"),
+//     m = document,
+//     b = window;
+//   b = b[c] || (b[c] = {});
+//   var d = b.maps || (b.maps = {}),
+//     r = new Set(),
+//     e = new URLSearchParams(),
+//     u = () =>
+//       h ||
+//       (h = new Promise(async (f, n) => {
+//         await (a = m.createElement("script"));
+//         e.set("libraries", [...r] + "");
+//         for (k in g)
+//           e.set(
+//             k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+//             g[k]
+//           );
+//         e.set("callback", c + ".maps." + q);
+//         a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+//         d[q] = f;
+//         a.onerror = () => (h = n(Error(p + " could not load.")));
+//         a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+//         // m.head.prepend(a);
+//         el.insertAdjacentElement("afterend", a); //
+//       }));
+//   d[l]
+//     ? console.warn(p + " only loads once. Ignoring:", g)
+//     : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+// })({ key: "AIzaSyDcJiCVRXzo1JlDi_XNGffs3XgB0wzc55E", v: "weekly" });
+
+// let map;
+
+// async function initMap() {
+//   const { Map } = await google.maps.importLibrary("maps");
+
+//   map = new Map(document.getElementById("map"), {
+//     center: { lat: 33.708633, lng: -117.755888 },
+//     zoom: 8,
+//   });
+// }
+
+// initMap();

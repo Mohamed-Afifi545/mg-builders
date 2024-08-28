@@ -370,6 +370,9 @@
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+  .map-container {
+    font-size: 1.5rem;
+  }
 }
 
 /* *************************** */
@@ -394,6 +397,10 @@
   .section-testimonials {
     padding-top: 2.3rem;
   }
+
+  /* .map-wrapper {
+    height: 35rem;
+  } */
 }
 
 /* *************************** */
