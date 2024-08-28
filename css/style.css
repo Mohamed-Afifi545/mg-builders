@@ -62,7 +62,6 @@
 
 .nav-active {
   color: var(--accent-bright-orange) !important;
-  font-size: 1.6rem !important;
 }
 
 .btn-mobile-nav {
@@ -698,7 +697,7 @@
 }
 
 .map-wrapper {
-  max-width: 75%;
+  max-width: 80%;
   height: 45rem;
   margin: 0 auto;
 }

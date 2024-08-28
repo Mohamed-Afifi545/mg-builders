@@ -329,6 +329,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//prevent default for CTA button
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const ctaButton = document.querySelector("#form-btn");
+
+//   ctaButton.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     // Add your custom logic here to handle the click event
+//   });
+// });
+
 // ((g) => {
 //   var h,
 //     a,
