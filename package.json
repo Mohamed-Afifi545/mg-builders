@@ -1,0 +1,18 @@
+{
+  "name": "mg-builders-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "postcss src/css/main.css > src/css/main.min.css",
+    "build": "parcel build src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.0.5",
+    "parcel-bundler": "^1.12.5",
+    "postcss-cli": "^11.0.0"
+  }
+}

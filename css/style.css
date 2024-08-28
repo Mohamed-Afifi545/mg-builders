@@ -594,11 +594,7 @@
   -moz-border-radius: 11px;
   -ms-border-radius: 11px;
   -o-border-radius: 11px;
-  background-image: linear-gradient(
-    to right bottom,
-    var(--primary-deep-blue),
-    var(--accent-teal)
-  );
+  background-image: linear-gradient(to right bottom, black, grey);
   overflow: hidden;
 }
 
