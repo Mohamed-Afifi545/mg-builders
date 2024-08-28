@@ -52,8 +52,8 @@
   --secondary-light-gray: #d3d3d3;
 
   /* Accent Colors */
-  /* --accent-bright-orange: #fbb900; */
-  --accent-bright-orange: #705200;
+  --accent-bright-orange: #fbb900;
+  /* --accent-bright-orange: #705200; */
   --accent-teal: #008080;
 
   /* Tints and Shades */
@@ -148,7 +148,7 @@ main {
 .btn--full:link,
 .btn--full:visited {
   background-color: var(--accent-bright-orange);
-  color: var(--primary-white);
+  color: var(--primary-black);
 }
 .btn--full:hover,
 .btn--full:active {
@@ -167,13 +167,12 @@ main {
 }
 .btn--form {
   background-color: var(--accent-bright-orange);
-  color: var(--primary-white);
+  color: var(--primary-black);
   align-self: end;
   padding: 1.2rem;
 }
 .btn--form:hover {
   background-color: var(--secondary-gold);
-  color: var(--primary-white);
 }
 
 .link:link,

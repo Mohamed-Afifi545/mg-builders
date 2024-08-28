@@ -100,9 +100,9 @@
     grid-template-columns: 1fr;
   }
 
-  .cta {
+  /* .cta {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   .cta-form {
     grid-template-columns: 1fr;
@@ -202,13 +202,24 @@
 
   .section-about {
     flex-direction: column-reverse;
-    padding: 9.6rem 0;
     gap: 5rem;
     /* height: 100vh; */
   }
 
   .about-container {
     width: 100%;
+  }
+  .section-about::after {
+    display: none;
+  }
+  .about-img {
+    height: 30rem;
+  }
+  .about-img--exp {
+    bottom: -60px;
+    right: -58px;
+    width: 123px;
+    height: 80px;
   }
 
   .logos img {
@@ -327,14 +338,14 @@
     gap: 1.2rem;
   }
 
-  .cta {
+  /* .cta {
     grid-template-columns: 1fr;
-  }
+  } */
 
-  .cta-img-box {
+  /* .cta-img-box {
     height: 32rem;
     grid-row: 1;
-  }
+  } */
 
   .cta-txt-box {
     padding: 3.2rem;
@@ -379,6 +390,12 @@
 /* below 320 width (S phones)*/
 
 @media (max-width: 20em) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-description {
+    font-size: 1.8rem !important;
+  }
   .pricing-plan--complete::after {
     top: 5%;
     right: -27%;
@@ -389,13 +406,13 @@
   }
 
   .section-cta,
-  .section-featured,
+  .section-about,
   .section-hero,
-  .section-how,
-  .section-meals,
-  .section-pricing,
+  .section-services,
+  .section-map,
+  .section-gallery,
   .section-testimonials {
-    padding-top: 2.3rem;
+    padding-top: 11.3rem;
   }
 
   /* .map-wrapper {

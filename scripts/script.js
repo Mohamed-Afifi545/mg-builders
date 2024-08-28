@@ -308,7 +308,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Add or remove the "visible" class to the sections and steps when they are intersecting the viewport or not.
       entries.forEach((entry) => {
         // Add or remove the "visible" class to the steps when they are intersecting the viewport.
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         } else {
