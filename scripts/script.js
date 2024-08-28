@@ -152,7 +152,7 @@ const createDots = function () {
     dotContainer.insertAdjacentHTML(
       "beforeend",
       `
-    <button class="dots__dot" data-slide="${i}"></button>
+    <button class="dots__dot" data-slide="${i}"  aria-label="dot-${i}"></button>
     `
     );
   });
@@ -266,8 +266,10 @@ function handleTouchMove(event) {
 
 // Add event listeners to the desired element
 const slider = document.querySelector(".slider");
-slider.addEventListener("touchstart", handleTouchStart, false);
-slider.addEventListener("touchmove", handleTouchMove, false);
+slider.addEventListener("touchstart", handleTouchStart, false, {
+  passive: true,
+});
+slider.addEventListener("touchmove", handleTouchMove, false, { passive: true });
 
 ///////////////////////
 ////////////////

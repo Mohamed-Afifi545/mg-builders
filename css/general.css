@@ -48,11 +48,12 @@
   --secondary-black: #212121;
 
   /* Secondary Colors */
-  --secondary-gold: #d19a00;
+  --secondary-gold: #e0a700;
   --secondary-light-gray: #d3d3d3;
 
   /* Accent Colors */
-  --accent-bright-orange: #fbb900;
+  /* --accent-bright-orange: #fbb900; */
+  --accent-bright-orange: #705200;
   --accent-teal: #008080;
 
   /* Tints and Shades */

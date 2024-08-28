@@ -755,7 +755,7 @@
 
 .footer-link--link:link,
 .footer-link--link:visited {
-  color: blue;
+  color: var(--shade-gold);
   text-decoration: underline;
 }
 
@@ -797,5 +797,5 @@
 }
 
 .collapsible-content.show {
-  max-height: 400px; /* Adjust as needed */
+  max-height: 400px;
 }
