@@ -48,15 +48,18 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = link.getAttribute("href");
     if (href === "#") {
+      e.preventDefault();
+
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
     if (href !== "#" && href.startsWith("#")) {
+      e.preventDefault();
+
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
@@ -265,3 +268,59 @@ function handleTouchMove(event) {
 const slider = document.querySelector(".slider");
 slider.addEventListener("touchstart", handleTouchStart, false);
 slider.addEventListener("touchmove", handleTouchMove, false);
+
+///////////////////////
+////////////////
+////////////////
+////////////////
+
+// Collapsible sections
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".collapsible-toggle");
+  const contents = document.querySelectorAll(".collapsible-content");
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetContent = document.getElementById(targetId);
+
+      contents.forEach((content) => {
+        if (content !== targetContent) {
+          content.classList.remove("show");
+        }
+      });
+      targetContent.classList.toggle("show");
+    });
+  });
+});
+
+// Smooth scrolling to sections
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const steps = document.querySelectorAll(".step-text-box, .step-img-box");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // Add or remove the "visible" class to the sections and steps when they are intersecting the viewport or not.
+      entries.forEach((entry) => {
+        // Add or remove the "visible" class to the steps when they are intersecting the viewport.
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  steps.forEach((step) => {
+    observer.observe(step);
+  });
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
