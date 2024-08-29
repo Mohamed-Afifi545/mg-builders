@@ -679,7 +679,7 @@
 
 .section-map {
   padding: 13.6rem 0 4rem 0;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .map-container {
   font-size: 2rem;
