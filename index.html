@@ -877,6 +877,8 @@ We arrange and manage the materials, workers, equipment and services needed for 
             href="#"
           >
             <img
+              itemtype="https://schema.org/GeneralContractor"
+              itemprop="logo"
               class="logo"
               src="img/logos/footer.avif"
               alt="MG Builders logo"
@@ -924,13 +926,18 @@ We arrange and manage the materials, workers, equipment and services needed for 
         </div>
         <div class="address-col">
           <p class="footer-heading">Contact US</p>
-          <address class="contacts">
+          <address
+            class="contacts"
+            itemscope
+            itemtype="https://schema.org/GeneralContractor"
+          >
             <p class="address">
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Irvine%2C%20CA%2092620"
                 class="footer-link footer-link--link"
                 target="_blank"
                 rel="noopener"
+                itemprop="location"
                 >California,Irvine, CA 92620</a
               >
             </p>
@@ -939,6 +946,7 @@ We arrange and manage the materials, workers, equipment and services needed for 
               href="tel:(714) 787-8097"
               target="_blank"
               rel="noreferrer"
+              itemprop="telephone"
               >(714) 787-8097</a
             >
             <br />
@@ -948,6 +956,7 @@ We arrange and manage the materials, workers, equipment and services needed for 
               href="mailto:m@mgbuilders.us"
               target="_blank"
               rel="noreferrer"
+              itemprop="email"
               >Contact us by E-mail</a
             >
           </address>
